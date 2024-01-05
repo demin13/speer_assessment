@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "64c9d0cd-285b-47b0-82b8-43778604e712",
+		"name": "Speer Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18646416"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sonu Singh\",\r\n    \"email\": \"sonu4321singh@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/signup/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"signup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"shekhar4321anand@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/auth/login/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "Create Note",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA0NDA4OTQ2LCJpYXQiOjE3MDQ0MDUzNDYsImp0aSI6ImQ2MTNhNWVmZTZlNzQ3ZWRhYmJlYmU5NTQ0ZDJmYmQ0IiwiZW1haWwiOiJzaGVraGFyNDMyMWFuYW5kQGdtYWlsLmNvbSIsImF1ZCI6InNwZWVyQXNzZXNzIiwiaXNzIjoic3BlZXJBc3Nlc3MifQ.fflk7WeAtSCPHBWG266LveTpxLuTlugGIbjdszwnxZ8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Repulic day\",\r\n    \"content\": \"repulic day is celebrated on 26th january.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/notes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list all notes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA0NDE3OTYyLCJpYXQiOjE3MDQ0MTQzNjIsImp0aSI6IjBmMjgzOGU4ZjMxMDQ0OGU4NmRmOThiZWU5Y2I0YWMxIiwiZW1haWwiOiJzb251NDMyMXNpbmdoQGdtYWlsLmNvbSIsImF1ZCI6InNwZWVyQXNzZXNzIiwiaXNzIjoic3BlZXJBc3Nlc3MifQ._1ugVhbhQwU94Oz_yxTAGzvFQl0GNJorXlw87ACS9bA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/notes/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single note",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA0NDEzODUzLCJpYXQiOjE3MDQ0MTAyNTMsImp0aSI6ImExNDQ1YTI4ZDhmOTRiYWU4OTI3M2I4YjY0NjA5MWFiIiwiZW1haWwiOiJzaGVraGFyNDMyMWFuYW5kQGdtYWlsLmNvbSIsImF1ZCI6InNwZWVyQXNzZXNzIiwiaXNzIjoic3BlZXJBc3Nlc3MifQ.YIQFKAJ_PgzQSDfre8qvkTyBc_yiLoxZ8qQrdRZGjYg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/notes/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a note",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA0NDEzODUzLCJpYXQiOjE3MDQ0MTAyNTMsImp0aSI6ImExNDQ1YTI4ZDhmOTRiYWU4OTI3M2I4YjY0NjA5MWFiIiwiZW1haWwiOiJzaGVraGFyNDMyMWFuYW5kQGdtYWlsLmNvbSIsImF1ZCI6InNwZWVyQXNzZXNzIiwiaXNzIjoic3BlZXJBc3Nlc3MifQ.YIQFKAJ_PgzQSDfre8qvkTyBc_yiLoxZ8qQrdRZGjYg",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/notes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update a note",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA0NDEzODUzLCJpYXQiOjE3MDQ0MTAyNTMsImp0aSI6ImExNDQ1YTI4ZDhmOTRiYWU4OTI3M2I4YjY0NjA5MWFiIiwiZW1haWwiOiJzaGVraGFyNDMyMWFuYW5kQGdtYWlsLmNvbSIsImF1ZCI6InNwZWVyQXNzZXNzIiwiaXNzIjoic3BlZXJBc3Nlc3MifQ.YIQFKAJ_PgzQSDfre8qvkTyBc_yiLoxZ8qQrdRZGjYg",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"Hi there, This is Shekhar. I am a software engineer. day\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/notes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search in all notes",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA0NDE3OTYyLCJpYXQiOjE3MDQ0MTQzNjIsImp0aSI6IjBmMjgzOGU4ZjMxMDQ0OGU4NmRmOThiZWU5Y2I0YWMxIiwiZW1haWwiOiJzb251NDMyMXNpbmdoQGdtYWlsLmNvbSIsImF1ZCI6InNwZWVyQXNzZXNzIiwiaXNzIjoic3BlZXJBc3Nlc3MifQ._1ugVhbhQwU94Oz_yxTAGzvFQl0GNJorXlw87ACS9bA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8000/api/notes/search?q=banglore",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "banglore"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "share notes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzA0NDE3NjU0LCJpYXQiOjE3MDQ0MTQwNTQsImp0aSI6ImI4NDRhZDM5MDZjODQ2ODg5ZTdmMzRiZDBkNTkzMzUwIiwiZW1haWwiOiJzaGVraGFyNDMyMWFuYW5kQGdtYWlsLmNvbSIsImF1ZCI6InNwZWVyQXNzZXNzIiwiaXNzIjoic3BlZXJBc3Nlc3MifQ.jMotDdjSi4ZGIzLMe9u3ixmvEteMvqbvET4aaU91Hno",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_ids\" : [3]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/notes/2/share",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"notes",
+								"2",
+								"share"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
