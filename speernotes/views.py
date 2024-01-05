@@ -102,6 +102,7 @@ class NotesView(APIView):
 
 
 class ShareNote(APIView):
+  
     @staticmethod
     def post(request, id=None):
         try:
